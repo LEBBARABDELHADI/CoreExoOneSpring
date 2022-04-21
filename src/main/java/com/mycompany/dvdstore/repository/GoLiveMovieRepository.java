@@ -4,8 +4,7 @@ import com.mycompany.dvdstore.entity.Movie;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class GoLiveMovieRepository {
    // public static List<Movie> movies =new ArrayList<>();
