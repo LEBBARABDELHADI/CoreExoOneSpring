@@ -17,8 +17,10 @@ public class App
     {
         GoLiveMovieRepository goLiveMovieRepository =new GoLiveMovieRepository();
         MovieService movieService =new MovieService();
+        // we inject the class GoLiveMovieRepository instead of the interface in setMovieRepositoryInterface
         movieService.setMovieRepositoryInterface(goLiveMovieRepository);
         MovieController movieController =new MovieController();
+        // we inject the class MovieService instead of the interface MovieServiceInterface
         movieController.setMovieServiceInterface(movieService);
         movieController.addUsingConsole();
 

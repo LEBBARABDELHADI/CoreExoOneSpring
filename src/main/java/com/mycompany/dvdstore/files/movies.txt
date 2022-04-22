@@ -4,3 +4,4 @@ Interstellar;Action
 La grande vadrouille;Comedie
 Titanic;Emotion
 LE ROI LION;ANIMATION
+Rencontre du 3ème type;Action
