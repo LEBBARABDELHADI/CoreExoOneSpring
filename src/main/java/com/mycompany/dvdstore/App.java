@@ -15,7 +15,11 @@ public class App
 {
     public static void main( String[] args )
     {
+        GoLiveMovieRepository goLiveMovieRepository =new GoLiveMovieRepository();
+        MovieService movieService =new MovieService();
+        movieService.setMovieRepositoryInterface(goLiveMovieRepository);
         MovieController movieController =new MovieController();
+        movieController.setMovieServiceInterface(movieService);
         movieController.addUsingConsole();
 
 

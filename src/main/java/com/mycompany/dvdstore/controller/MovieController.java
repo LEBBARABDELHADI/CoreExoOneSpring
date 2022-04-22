@@ -8,6 +8,15 @@ import java.util.Scanner;
 
 public class MovieController {
     MovieServiceInterface movieServiceInterface ;
+
+    public MovieServiceInterface getMovieServiceInterface() {
+        return movieServiceInterface;
+    }
+
+    public void setMovieServiceInterface(MovieServiceInterface movieServiceInterface) {
+        this.movieServiceInterface = movieServiceInterface;
+    }
+
     public void addUsingConsole(){
         Movie movie =new Movie();
         System.out.println("Veillez saisir le titre du film");
