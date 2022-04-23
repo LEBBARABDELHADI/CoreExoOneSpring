@@ -1,6 +1,5 @@
 package com.mycompany.dvdstore.controller;
 
-import com.mycompany.dvdstore.Service.MovieService;
 import com.mycompany.dvdstore.Service.MovieServiceInterface;
 import com.mycompany.dvdstore.entity.Movie;
 

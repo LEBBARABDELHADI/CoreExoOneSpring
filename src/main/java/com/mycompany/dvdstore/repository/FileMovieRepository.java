@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 
-public class GoLiveMovieRepository implements MovieRepositoryInterface {
+public class FileMovieRepository implements MovieRepositoryInterface {
    // public static List<Movie> movies =new ArrayList<>();
 
     public void add (Movie movie){
