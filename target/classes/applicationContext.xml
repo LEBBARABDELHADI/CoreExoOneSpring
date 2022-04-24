@@ -2,17 +2,17 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="byType">
 
-    <bean id ="movieRepository" class="com.mycompany.dvdstore.repository.FileMovieRepository">
-    <property name="file" value="/Users/alpacino/Desktop/WORK-SRC/CoreExoOne/src/main/java/com/mycompany/dvdstore/files/movies.csv"/>
+    <bean  class="com.mycompany.dvdstore.repository.FileMovieRepository">
+    <property name="file" value= "/Users/alpacino/Desktop/WORK-SRC/CoreExoOne/src/main/java/com/mycompany/dvdstore/files/movies.csv"/>
     </bean>
 
-    <bean id="movieServiceInterface" class="com.mycompany.dvdstore.Service.DefaultMovieService">
-        <property name="movieRepositoryInterface" ref="movieRepository"/>
+    <bean class="com.mycompany.dvdstore.Service.DefaultMovieService" >
+        <!--property name="movieRepositoryInterface" ref="movieRepositoryInterface"/-->
     </bean>
-    <bean class="com.mycompany.dvdstore.controller.MovieController">
-        <property name="movieServiceInterface" ref="movieServiceInterface"/>
+    <bean class="com.mycompany.dvdstore.controller.MovieController" >
+        <!--property name="movieServiceInterface" ref="movieServiceInterface"/-->
     </bean>
     
 
