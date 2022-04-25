@@ -7,8 +7,9 @@
     http://www.springframework.org/schema/context/spring-context.xsd" default-autowire="byType">
 
     <context:annotation-config/>
+    <context:property-placeholder location="classpath:application.properties"/>
     <bean  class="com.mycompany.dvdstore.repository.FileMovieRepository">
-    <property name="file" value= "/Users/alpacino/Desktop/WORK-SRC/CoreExoOne/src/main/java/com/mycompany/dvdstore/files/movies.csv"/>
+    <!--property name="file" value= "/Users/alpacino/Desktop/WORK-SRC/CoreExoOne/src/main/java/com/mycompany/dvdstore/files/movies.csv"/-->
     </bean>
 
     <bean class="com.mycompany.dvdstore.Service.DefaultMovieService" >
