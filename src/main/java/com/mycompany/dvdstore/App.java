@@ -1,9 +1,8 @@
 package com.mycompany.dvdstore;
 
-import com.mycompany.dvdstore.Service.DefaultMovieService;
 import com.mycompany.dvdstore.controller.MovieController;
-import com.mycompany.dvdstore.repository.FileMovieRepository;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -22,7 +21,8 @@ public class App
         // we inject the class MovieService instead of the interface MovieServiceInterface
         movieController.setMovieServiceInterface(movieService);*/
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        //ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         MovieController movieController = context.getBean(MovieController.class);
 
         movieController.addUsingConsole();
