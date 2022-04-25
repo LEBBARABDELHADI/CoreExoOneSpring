@@ -2,10 +2,12 @@ package com.mycompany.dvdstore.controller;
 
 import com.mycompany.dvdstore.Service.MovieServiceInterface;
 import com.mycompany.dvdstore.entity.Movie;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Scanner;
 
 public class MovieController {
+    @Autowired
     MovieServiceInterface movieServiceInterface ;
 
     public MovieServiceInterface getMovieServiceInterface() {
