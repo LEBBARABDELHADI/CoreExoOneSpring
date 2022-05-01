@@ -5,9 +5,9 @@ import com.mycompany.dvdstore.repository.MovieRepositoryInterface;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Repository
 public class FileMovieRepository implements MovieRepositoryInterface {
@@ -23,6 +23,26 @@ public class FileMovieRepository implements MovieRepositoryInterface {
         this.file = file;
     }
 
+    public List<Movie> list(){
+        List<Movie> movies1=new ArrayList<>();
+
+        try(BufferedReader br= new BufferedReader(new FileReader(file))) {
+            for (String line;(line =br.readLine())!=null;
+            ) {
+                final  Movie movie = new Movie();
+                final String[] titreEtGenrre = line.split(";");
+                movie.setTitle(titreEtGenrre[0]);
+                movie.setGenre(titreEtGenrre[1]);
+                movies1.add(movie);
+
+            }
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return movies1;
+    }
     public void add (Movie movie){
         FileWriter writer;
         try{

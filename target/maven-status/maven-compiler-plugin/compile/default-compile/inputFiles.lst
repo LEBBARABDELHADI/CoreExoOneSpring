@@ -1,0 +1,8 @@
+/Users/alpacino/Desktop/WORK-SRC/CoreExoOne/src/main/java/com/mycompany/dvdstore/Service/MovieServiceInterface.java
+/Users/alpacino/Desktop/WORK-SRC/CoreExoOne/src/main/java/com/mycompany/dvdstore/repository/MovieRepositoryInterface.java
+/Users/alpacino/Desktop/WORK-SRC/CoreExoOne/src/main/java/com/mycompany/dvdstore/controller/MovieController.java
+/Users/alpacino/Desktop/WORK-SRC/CoreExoOne/src/main/java/com/mycompany/dvdstore/App.java
+/Users/alpacino/Desktop/WORK-SRC/CoreExoOne/src/main/java/com/mycompany/dvdstore/Service/DefaultMovieService.java
+/Users/alpacino/Desktop/WORK-SRC/CoreExoOne/src/main/java/com/mycompany/dvdstore/repository/memory/MemoryMovieRepository.java
+/Users/alpacino/Desktop/WORK-SRC/CoreExoOne/src/main/java/com/mycompany/dvdstore/repository/file/FileMovieRepository.java
+/Users/alpacino/Desktop/WORK-SRC/CoreExoOne/src/main/java/com/mycompany/dvdstore/entity/Movie.java
