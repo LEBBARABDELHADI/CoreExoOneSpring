@@ -10,6 +10,7 @@ import java.util.List;
 @Service
 public class DefaultMovieService implements MovieServiceInterface{
 
+
     @Autowired
     MovieRepositoryInterface movieRepositoryInterface;
 
@@ -22,9 +23,18 @@ public class DefaultMovieService implements MovieServiceInterface{
     }
     public List<Movie> listMovies(){
         return movieRepositoryInterface.list();
-    };
+    }
+
+    @Override
+    public Movie getMovieById(long id) {
+        return movieRepositoryInterface.getById(id);
+    }
+
+    ;
 
     public void registerMovie(Movie movie){
+
+
         movieRepositoryInterface.add(movie);
     }
 

@@ -8,4 +8,5 @@ public interface MovieServiceInterface {
 
     void registerMovie(Movie movie);
     List<Movie> listMovies();
+    Movie getMovieById(long id);
 }
