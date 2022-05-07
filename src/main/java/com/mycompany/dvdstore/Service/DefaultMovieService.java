@@ -32,10 +32,10 @@ public class DefaultMovieService implements MovieServiceInterface{
 
     ;
 
-    public void registerMovie(Movie movie){
+    public Movie registerMovie(Movie movie){
 
 
-        movieRepositoryInterface.add(movie);
+        return movieRepositoryInterface.add(movie);
     }
 
 }
